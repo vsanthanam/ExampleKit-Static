@@ -8,6 +8,5 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ExampleKit : NSObject
-
-@end
+#import <ExampleKit/EKObject.h>
+#import <ExampleKit/EKSession.h>

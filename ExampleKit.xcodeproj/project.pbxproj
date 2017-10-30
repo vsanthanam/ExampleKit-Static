@@ -6,10 +6,38 @@
 	objectVersion = 48;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		076E4B8E1FA7B23400239BF6 /* Framework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 076E4B8F1FA7B23400239BF6 /* Build configuration list for PBXAggregateTarget "Framework" */;
+			buildPhases = (
+				076E4B941FA7B23C00239BF6 /* Multi-Platform Bind */,
+			);
+			dependencies = (
+				076E4B931FA7B23900239BF6 /* PBXTargetDependency */,
+			);
+			name = Framework;
+			productName = Framework;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		0796C7B91FA2AC91005AA542 /* ExampleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0796C7B81FA2AC91005AA542 /* ExampleKit.m */; };
 		0796C7BA1FA2AC91005AA542 /* ExampleKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0796C7B71FA2AC91005AA542 /* ExampleKit.h */; };
+		0796C7C61FA2B062005AA542 /* EKObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0796C7C21FA2B062005AA542 /* EKObject.m */; };
+		0796C7C71FA2B062005AA542 /* EKSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 0796C7C31FA2B062005AA542 /* EKSession.m */; };
+		0796C7C81FA2B066005AA542 /* EKSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 0796C7C51FA2B062005AA542 /* EKSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0796C7C91FA2B06B005AA542 /* EKObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 0796C7C41FA2B062005AA542 /* EKObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		076E4B921FA7B23900239BF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0796C7AC1FA2AC91005AA542 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0796C7B31FA2AC91005AA542;
+			remoteInfo = ExampleKit;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		0796C7B21FA2AC91005AA542 /* CopyFiles */ = {
@@ -25,9 +53,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		077B6C3D1FA2B83400996202 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		0796C7B41FA2AC91005AA542 /* libExampleKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libExampleKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0796C7B71FA2AC91005AA542 /* ExampleKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleKit.h; sourceTree = "<group>"; };
-		0796C7B81FA2AC91005AA542 /* ExampleKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleKit.m; sourceTree = "<group>"; };
+		0796C7C21FA2B062005AA542 /* EKObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EKObject.m; sourceTree = "<group>"; };
+		0796C7C31FA2B062005AA542 /* EKSession.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EKSession.m; sourceTree = "<group>"; };
+		0796C7C41FA2B062005AA542 /* EKObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EKObject.h; sourceTree = "<group>"; };
+		0796C7C51FA2B062005AA542 /* EKSession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EKSession.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,13 +92,29 @@
 		0796C7B61FA2AC91005AA542 /* ExampleKit */ = {
 			isa = PBXGroup;
 			children = (
+				077B6C3D1FA2B83400996202 /* module.modulemap */,
 				0796C7B71FA2AC91005AA542 /* ExampleKit.h */,
-				0796C7B81FA2AC91005AA542 /* ExampleKit.m */,
+				0796C7C41FA2B062005AA542 /* EKObject.h */,
+				0796C7C21FA2B062005AA542 /* EKObject.m */,
+				0796C7C51FA2B062005AA542 /* EKSession.h */,
+				0796C7C31FA2B062005AA542 /* EKSession.m */,
 			);
 			path = ExampleKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0796C7C11FA2AF97005AA542 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0796C7C81FA2B066005AA542 /* EKSession.h in Headers */,
+				0796C7C91FA2B06B005AA542 /* EKObject.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		0796C7B31FA2AC91005AA542 /* ExampleKit */ = {
@@ -76,6 +124,8 @@
 				0796C7B01FA2AC91005AA542 /* Sources */,
 				0796C7B11FA2AC91005AA542 /* Frameworks */,
 				0796C7B21FA2AC91005AA542 /* CopyFiles */,
+				0796C7C11FA2AF97005AA542 /* Headers */,
+				076E4B8B1FA7A83000239BF6 /* Build Framework */,
 			);
 			buildRules = (
 			);
@@ -95,6 +145,10 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Varun Santhanam";
 				TargetAttributes = {
+					076E4B8E1FA7B23400239BF6 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
 					0796C7B31FA2AC91005AA542 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
@@ -114,22 +168,81 @@
 			projectRoot = "";
 			targets = (
 				0796C7B31FA2AC91005AA542 /* ExampleKit */,
+				076E4B8E1FA7B23400239BF6 /* Framework */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		076E4B8B1FA7A83000239BF6 /* Build Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nexport FRAMEWORK_LOCN=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework\"\n\n# Create Directory for Actual Headers Location for Version A\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers\"\n\n# Symbolically Link the Headers to their Parse Directory\nln -sfh A \"${FRAMEWORK_LOCN}/Versions/Current\"\nln -sfh Versions/Current/Headers \"${FRAMEWORK_LOCN}/Headers\"\nln -sfh \"Versions/Current/${PRODUCT_NAME}\" \\\n\"${FRAMEWORK_LOCN}/${PRODUCT_NAME}\"\n\n# Copy Public Headers Into Their Directory\ncp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \\\n\"${FRAMEWORK_LOCN}/Versions/A/Headers\"\n\n# Create Module Directory\nmkdir -p \"${FRAMEWORK_LOCN}/Modules\"\n\n# Copy Module Map\ncp -f \"${SRCROOT}/${PRODUCT_NAME}/module.modulemap\" \"${FRAMEWORK_LOCN}/Modules/\"";
+		};
+		076E4B941FA7B23C00239BF6 /* Multi-Platform Bind */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Multi-Platform Bind";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset +u\n\nif [[ $SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SCRIPT_RUNNING=1\n\n# Environment Variables\nFRAMEWORK_NAME=${PROJECT_NAME}\nSTATIC_LIB=\"lib${PROJECT_NAME}.a\" # Product of other target\nFRAMEWORK_LOCATION=\"${BUILT_PRODUCTS_DIR}/${FRAMEWORK_NAME}.framework\" # Product of script in other target build phase\nOUTPUT_DIR=${PROJECT_DIR}/Release\n\n# Encapsulate Xcode Build Process\nfunction build_static_library_and_framework {\n    \n    xcrun xcodebuild -project \"${PROJECT_FILE_PATH}\" \\\n    -target \"${PROJECT_NAME}\" \\\n    -configuration \"${CONFIGURATION}\" \\\n    -sdk \"${1}\" \\\n    ONLY_ACTIVE_ARCH=NO \\\n    BUILD_DIR=\"${BUILD_DIR}\" \\\n    OBJROOT=\"${OBJROOT}\" \\\n    BUILD_ROOT=\"${BUILD_ROOT}\" \\\n    SYMROOT=\"${SYMROOT}\" $ACTION\n    \n}\n\n# Encapsulate Lipo\nfunction merge_binaries {\n    \n    xcrun lipo -create \"${1}\" \"${2}\" -output \"${3}\"\n    \n}\n\n# 1 - Get SDK to determine platform (iphoneos or iphonesimulator)\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]; then\nSDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\n# 2 - Get Opposite Platform (iphonesimulator --> iphoneos, iphoneos --> iphonesimulator)\nif [ \"$SDK_PLATFORM\" == \"iphoneos\" ]; then\nOTHER_PLATFORM=iphonesimulator\nelse\nOTHER_PLATFORM=iphoneos\nfi\n\n# 3 - Get the build directories\nCURRENT_DIR=${BUILD_DIR}/${CONFIGURATION}-${SDK_PLATFORM}\nOTHER_DIR=${BUILD_DIR}/${CONFIGURATION}-${OTHER_PLATFORM}\n\n# 4 - Build Opposite Platform\nbuild_static_library_and_framework \"${OTHER_PLATFORM}\"\n\n# 5 - Copy Framework Structure\nrm -rf \"${OUTPUT_DIR}\"\nmkdir -p \"${OUTPUT_DIR}\"\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-${SDK_PLATFORM}/${PROJECT_NAME}.framework\" \"${OUTPUT_DIR}/${PROJECT_NAME}.framework\"\n\n# 6 - Merge Into /Release\nmerge_binaries \"${CURRENT_DIR}/${STATIC_LIB}\" \"${OTHER_DIR}/${STATIC_LIB}\" \"${OUTPUT_DIR}/${PROJECT_NAME}.framework/${PROJECT_NAME}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0796C7B01FA2AC91005AA542 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0796C7B91FA2AC91005AA542 /* ExampleKit.m in Sources */,
+				0796C7C71FA2B062005AA542 /* EKSession.m in Sources */,
+				0796C7C61FA2B062005AA542 /* EKObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		076E4B931FA7B23900239BF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0796C7B31FA2AC91005AA542 /* ExampleKit */;
+			targetProxy = 076E4B921FA7B23900239BF6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		076E4B901FA7B23400239BF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y88YPD4RJA;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		076E4B911FA7B23400239BF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y88YPD4RJA;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		0796C7BB1FA2AC91005AA542 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -238,10 +351,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = Y88YPD4RJA;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -250,10 +366,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = Y88YPD4RJA;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -261,6 +380,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		076E4B8F1FA7B23400239BF6 /* Build configuration list for PBXAggregateTarget "Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				076E4B901FA7B23400239BF6 /* Debug */,
+				076E4B911FA7B23400239BF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0796C7AF1FA2AC91005AA542 /* Build configuration list for PBXProject "ExampleKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
