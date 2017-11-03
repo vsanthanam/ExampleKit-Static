@@ -1,0 +1,6 @@
+framework module ExampleKit {
+    umbrella header "ExampleKit.h"
+    
+    export *
+    module * { export * }
+}
