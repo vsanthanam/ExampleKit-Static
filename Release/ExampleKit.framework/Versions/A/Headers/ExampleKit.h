@@ -6,7 +6,7 @@
 //  Copyright © 2017 Varun Santhanam. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 #import <ExampleKit/EKObject.h>
 #import <ExampleKit/EKSession.h>
